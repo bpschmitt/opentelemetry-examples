@@ -1,7 +1,20 @@
+## Overview
+
+This Terraform module will create an ECS Fargate cluster and deploy three services:
+
+- `Python demo application` - this application sends traces, metrics, and logs to the ADOT Load Balancer OTel Collector
+- `ADOT Load Balancer OTel Collector`  - this OTel collector instance runs the [loadbalancingexporter](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/loadbalancingexporter/README.md) and sends telemetry to the downstream ADOT OTel Collector
+- `ADOT OTel Collector` - this OTel collector instance is responsible for the majority of the telemetry transformations and tail sampling.
+
+---
+
+
+![ecs-fargate-otel](./images/ecs-fargate-otel.png)
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+- New Relic account and license key
 
 ## Providers
 
