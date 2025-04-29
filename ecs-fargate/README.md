@@ -16,6 +16,33 @@ This Terraform module will create an ECS Fargate cluster and deploy three servic
 
 - New Relic account and license key
 
+## Installing
+
+1. Initialize Terraform
+Run the following command to download the module and initialize Terraform:
+
+```bash
+terraform init
+```
+
+2. Review the execution plan
+Generate and review the Terraform execution plan:
+```bash
+terraform plan
+```
+3. Apply the configuration
+Apply the Terraform configuration to provision the resources:
+```bash
+terraform apply
+```
+
+4. Access the application
+Once the install is complete and all services are up and running, you can access the Python application by accessing the `application_url` in the Terraform output.
+
+```bash
+application_url = "http://<alb url>.us-east-2.elb.amazonaws.com:8080/rolldice"
+```
+
 ## Providers
 
 | Name | Version |
