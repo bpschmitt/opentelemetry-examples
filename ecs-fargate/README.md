@@ -11,6 +11,8 @@ This Terraform module will create an ECS Fargate cluster and deploy three servic
 
 ![ecs-fargate-otel](./images/ecs-fargate-otel.png)
 
+---
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
