@@ -33,7 +33,7 @@
         "options": {
             "awslogs-group": "/ecs/${demo_name}--otel-collector",
             "awslogs-create-group": "True",
-            "awslogs-region": "us-east-2",
+            "awslogs-region": "${aws_region}",
             "awslogs-stream-prefix": "ecs"
         }
     },

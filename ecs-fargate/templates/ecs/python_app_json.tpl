@@ -49,7 +49,7 @@
         "options": {
             "awslogs-group": "/ecs/${demo_name}-python-otel-example",
             "awslogs-create-group": "True",
-            "awslogs-region": "us-east-2",
+            "awslogs-region": "${aws_region}",
             "awslogs-stream-prefix": "ecs"
         }
     },
